@@ -52,6 +52,37 @@ export default function Articels() {
                 </div>
             ))}
         </div>
+        
+        {/* <div class="w-5/12">
+            <div class="bg-white shadow hover:shadow rounded-xl overflow-hidden">
+            <div class="leading-relaxed text-xl text-gray-800">
+                <img src="https://www.unbin.ac.id/asset/media/750x480/fin_lib.jpeg" alt="" />
+            </div>
+            <div class="px-1 py-5 bg-gradient-to-r from from-blue-700 to-blue-500 flex items-center justify-between">
+                <div class="flex items-center">
+                <div class="flex-shrink-0 mr-3">
+                </div>
+                <div class="text-white">
+                    <a href="#">PENGUMUMAN LIBUR AKHIR TAHUN FINKOM</a>
+                </div>
+                </div>
+            </div>
+            <div class="px-1 py-3 bg-gradient-to-r from from-blue-700 to-blue-500 flex items-center justify-between">
+                <div class="flex items-center">
+                <div class="flex-shrink-0 mr-3">
+                </div>
+                <div class="text-white text-[10px]">
+                    <p class="">BY FAKULTAS INFORMATIKA DAN KOMPUTER</p>
+                </div>
+                </div>
+                <div class="flex items-center">
+                <div class="flex-shrink-0 mr-3 text-white text-[10px]">
+                    27 Desember 2022
+                </div>
+                </div>
+            </div>
+            </div>
+        </div> */}
     </div>
     
   )

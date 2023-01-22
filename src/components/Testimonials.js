@@ -11,9 +11,7 @@ export default function Testimonials() {
 
   return (
     <div className="bg-white mt-8">
-      <h1 className='text-center font-bold text-4xl'>Testimonials</h1>
       <div className="container">
-        <Slides />
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 mt-16 px-4">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl py-4">Mengapa Binaniaga</h2>            
@@ -95,7 +93,9 @@ export default function Testimonials() {
             />
           </div>
         </div>
-        <Line />
+        <h1 className='text-center font-bold text-4xl mt-8'>Testimonials</h1>
+        <Slides />
+        {/* <Line /> */}
       </div>
     </div>
       

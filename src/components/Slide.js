@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 // import '../css/slick.css'
 // import '../css/slick-theme.css'
+import '../css/arrow.css'
 
 const Sliders = [
   { id: 1, img: 'https://www.unbin.ac.id/asset/media/avatar_review/1.jpg'},

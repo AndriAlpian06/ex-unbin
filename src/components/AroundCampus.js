@@ -108,7 +108,6 @@ export default function AroundCampus() {
   return (
     <div className='grid grid-cols-1 mt-8'>
         <Element name="test7" className="element px-4" id="containerElement" style={{
-            position: 'relative',
             height: '500px',
             overflow: 'scroll',
             marginBottom: '100px'

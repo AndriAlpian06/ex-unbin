@@ -6,7 +6,7 @@ import DropdownLink from './DropdownLink'
 
 export default function MobileNavbar() {
   return (
-    <Menu as={'div'} className='flex lg:hidden items-center justify-between py-2 px-4 border-b border-gray-700'>
+    <Menu as={'div'} className='flex lg:hidden items-center justify-between py-2 px-4'>
         <div className='flex px-4'>
             <a href="#" className="text-white font-medium mr-6"><img src={Logo} className='w-[170px] h-[55px]'></img></a>
         </div>
@@ -30,9 +30,9 @@ export default function MobileNavbar() {
 
             <a href="#" className="px-4 py-2 text-sm hover:bg-gray-100 text-gray-700 hover:text-black block">BERANDA</a>
             <Menu className='relative ml-4' as={'div'}>
-                <Menu.Button className='flex items-center gap-x-2'>
+                <Menu.Button className='flex text-black items-center gap-x-2'>
                 TENTANG UNBIN
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                     </svg>
                 </Menu.Button>
@@ -96,9 +96,9 @@ export default function MobileNavbar() {
             </Menu>
             <Line />
             <Menu className='relative ml-4' as={'div'}>
-                <Menu.Button className='flex items-center gap-x-2'>
+                <Menu.Button className='flex text-black items-center gap-x-2'>
                 FAKULTAS
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                     </svg>
                 </Menu.Button>
@@ -148,9 +148,9 @@ export default function MobileNavbar() {
             </Menu>
             <Line />
             <Menu className='relative ml-4' as={'div'}>
-                <Menu.Button className='flex items-center gap-x-2'>
+                <Menu.Button className='flex text-black items-center gap-x-2'>
                 PENELITIAN
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                     </svg>
                 </Menu.Button>
@@ -187,9 +187,9 @@ export default function MobileNavbar() {
             </Menu>
             <Line />
             <Menu className='relative ml-4' as={'div'}>
-                <Menu.Button className='flex items-center gap-x-2'>
+                <Menu.Button className='flex text-black items-center gap-x-2'>
                 PENDAFTARAN
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                     </svg>
                 </Menu.Button>
@@ -214,8 +214,8 @@ export default function MobileNavbar() {
             </Menu>
             <Line />
             <a href="#" className="px-4 py-2 text-sm hover:bg-gray-100 text-gray-700 hover:text-black block">KONTAK</a>
-            <Line />
-            <div className="search ml-2">
+            {/* <Line /> */}
+            {/* <div className="search ml-2">
                 <input placeholder="Type to search..." required className="input" name="text" type="text" />
                 <div className="icon ml-1">
                     <svg viewBox="0 0 512 512" className="ionicon text-white" xmlns="http://www.w3.org/2000/svg">
@@ -224,7 +224,7 @@ export default function MobileNavbar() {
                     <path d="M338.29 338.29L448 448" strokeWidth={32} strokeMiterlimit={10} strokeLinecap="round" stroke="currentColor" fill="none" />
                     </svg>
                 </div>
-            </div>
+            </div> */}
           </Menu.Items>
         </Transition>
     </Menu>

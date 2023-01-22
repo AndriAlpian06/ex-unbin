@@ -1,5 +1,7 @@
 import React from 'react'
 import Typed from 'react-typed'
+import backgroundVideo from '../video/backgroundVideo.mp4'
+import { AiOutlineSearch } from 'react-icons/ai'
 
 export default function Hero() {
 
@@ -13,12 +15,12 @@ export default function Hero() {
   ]
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900">
-      <div className="container">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-16 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">UNIVERSITAS BINANIAGA INDONESIA</h2>
-            <p className="text-white text-2xl leading-relaxed font-light mt-4 mb-6"><Typed
+    <div className='w-full h-screen relative'>
+        <video className='w-full h-full object-cover' src={backgroundVideo} autoPlay loop muted/>
+        <div className='absolute w-full h-full top-0 left-0 bg-gray-900/30'></div>
+        <div className='absolute top-0 w-full h-full flex flex-col justify-center text-center text-white p-4'>
+            <h1 className='uppercase text-5xl font-bold'>UNIVERSITAS BINANIAGA INDONESIA</h1>
+            <p className="text-white text-2xl font-semibold leading-relaxed mt-4 mb-6"><Typed
               strings={[
                   "be smart, be a profesional, and be a master"
               ]}
@@ -27,44 +29,20 @@ export default function Hero() {
               loop
             />
             </p>
-            <p className="mt-4 text-white">
-            Universitas Binaniaga Indonesia adalah kampus yang berlokasi di Kota Bogor yang memiliki 2 fakultas yakni Fakultas Ekonomi & Bisnis dan Fakultas Informatika & Komputer.  
-                Ayo bergabung dengan kami agar menjadi manusia Unggul dan Berkualitas! 
-            </p>
-
-            <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-              {features.map((feature) => (
-                <div key={feature.name} className="border-t border-gray-200 pt-4">
-                  <dt className="font-medium text-white">{feature.name}</dt>
-                  {/* <dd className="mt-2 text-sm text-white">{feature.description}</dd> */}
+            <p className='py-4 mx-auto max-w-[700px] text-white'>Universitas Binaniaga Indonesia adalah kampus yang berlokasi di Kota Bogor yang memiliki 2 fakultas yakni Fakultas Ekonomi & Bisnis dan Fakultas Informatika & Komputer.</p>
+            <div className='w-[80%] mx-auto mt-4'>
+              <form>   
+                <label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                <div className="relative">
+                    <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                    <input type="search" id="default-search" className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Cari Informasi Kampus" required />
+                    <button type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                 </div>
-              ))}
-            </dl>
-          </div>
-          <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-            <img
-              src="https://i.ibb.co/NKMkjz3/1.jpg"
-              alt="BEASISWA ISRP"
-              className="rounded-lg bg-gray-100"
-            />
-            <img
-              src="https://i.ibb.co/k8nmYwN/2.jpg"
-              alt="BEASISWA LULUSAN SMA/SMK"
-              className="rounded-lg bg-gray-100"
-            />
-            <img
-              src="https://i.ibb.co/P6RnyxF/3.jpg"
-              alt="MENERIMA KELAS REGULER & KARYAWAN"
-              className="rounded-lg bg-gray-100"
-            />
-            <img
-              src="https://i.ibb.co/TYkvy1D/4.jpg"
-              alt="PROGRAM STUDI"
-              className="rounded-lg bg-gray-100"
-            />
-          </div>
+              </form>
+            </div>
         </div>
-      </div>
     </div>
     
   )

@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 // import '../css/slick.css'
 // import '../css/slick-theme.css'
+import '../css/arrow.css'
 
 const Sliders = [
   { id: 1, img: 'https://www.unbin.ac.id/asset/media/isotope/138.JPG'},
@@ -24,7 +25,7 @@ function NextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "blue" }}
+      style={{ ...style, display: "block" }}
       onClick={onClick}
     />
   );
@@ -35,7 +36,7 @@ function PrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "blue" }}
+      style={{ ...style, display: "block" }}
       onClick={onClick}
     />
   );
@@ -60,7 +61,7 @@ export default class Slide extends Component {
         const settings = {
         dots: true,
         infinite: true,
-        slidesToShow: 1,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 5000,
@@ -95,7 +96,7 @@ export default class Slide extends Component {
         };
 
     return (
-      <div className="px-4 py-4 mt-8">
+      <div className="px-4 py-8 mt-8">
         <Slider {...settings}>
           {Sliders.map((item, index) => {
             return (

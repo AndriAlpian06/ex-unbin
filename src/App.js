@@ -7,6 +7,7 @@ import Notice from './components/Notice';
 import Partnership from './components/Partnership';
 import Banner from './components/Banner';
 import Footer from './components/Footer';
+import ButtonUp from './components/ButtonUp';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Notice />
       <Partnership />
       <Banner />
+      <ButtonUp />
       <Footer />
     </>
   );
