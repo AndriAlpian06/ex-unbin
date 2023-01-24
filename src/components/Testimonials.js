@@ -1,19 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/20/solid'
-import Slides from './Slide'
 import ReactPlayer from 'react-player'
 import Line from './Line'
 
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Testimonials() {
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   return (
     <div className="bg-white mt-8">
       <div className="container">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 mt-16 px-4">
-          <div>
+          <div data-aos="fade-up-right" data-aos-duration="500">
             <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl py-4">Mengapa Binaniaga</h2>            
               <Disclosure as="div" className="mt-2">
                 {({ open }) => (
@@ -84,7 +89,7 @@ export default function Testimonials() {
                 )}
               </Disclosure>
           </div>
-          <div className="player-wrapper">
+          <div className="player-wrapper" data-aos="fade-up-left" data-aos-duration="500">
             <ReactPlayer url='https://www.youtube.com/watch?v=_s1qd8GehP8&t=73s' 
               className="react-player"
               playing
@@ -93,8 +98,6 @@ export default function Testimonials() {
             />
           </div>
         </div>
-        <h1 className='text-center font-bold text-4xl mt-8'>Testimonials</h1>
-        <Slides />
         {/* <Line /> */}
       </div>
     </div>

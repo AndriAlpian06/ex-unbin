@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const clients = [
     {
@@ -201,8 +204,14 @@ const clients = [
 ]
 
 export default function Partnership() {
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
-    <div className="bg-[#2d3e50]">
+    <div className="bg-[#2d3e50]" data-aos="fade-up">
         <h2 className="text-center py-16 text-4xl text-white">Bekerjasama <span className='font-semibold'>dengan</span></h2>
         <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
     

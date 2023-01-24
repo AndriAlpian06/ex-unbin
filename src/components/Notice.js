@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Line from './Line'
 import Galery from './Galery'
 import Around from './AroundCampus'
+import Slides from './Slide'
 // import { EmbedToggler } from 'react-social-media-embed'
 import { FacebookEmbed } from 'react-social-media-embed';
 import { InstagramEmbed } from 'react-social-media-embed';
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function Notice() {
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   const posts = [
     {
@@ -40,7 +49,7 @@ export default function Notice() {
       <h1 className='text-center font-bold text-4xl'>Pengumuman</h1>
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-2 gap-x-16 sm:gap-8 mt-8 items-center'>
         {posts.map((post, index) => (
-            <div key={index} className="bg-white shadow-xl rounded-xl overflow-hidden"> 
+            <div key={index} className="bg-white shadow-xl rounded-xl overflow-hidden" data-aos="zoom-in" data-aos-duration="800"> 
                 <div className="leading-relaxed text-xl text-gray-800">
                   <img className="aspect-square w-full object-cover object-center" src={post.picture} alt="" />
                 </div>
@@ -67,27 +76,33 @@ export default function Notice() {
         ))}
       </div>
       <div className='grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-16 mt-16'>
-          <div>
+          <div data-aos="zoom-in-left" data-aos-duration="500">
             <h1 className='font-semibold ml-8'>SEPUTAR KAMPUS</h1>
             <Around />
           </div>
-          <div>
+          <div data-aos="zoom-in-up" data-aos-duration="600">
             <h1 className='font-semibold ml-8'>INSTAGRAM</h1>
             <div style={{ display: 'flex', justifyContent: 'center' }} className='px-4 py-4 mt-8'>
               <InstagramEmbed url="https://www.instagram.com/p/ClXjl6ZPMFF/?utm_source=ig_embed&ig_rid=79a6c451-6e91-4f96-95fa-30cbe72f0d2e" width="100%" />
             </div>
           </div>
-          <div>
+          <div data-aos="zoom-in-right" data-aos-duration="700">
             <h1 className='font-semibold ml-8'>FACEBOOK</h1>
               <div style={{ display: 'flex', justifyContent: 'center' }} className='px-4 py-4 mt-8'>
                 <FacebookEmbed url="https://www.facebook.com/photo/?fbid=5249371051842159&set=a.1105644156214890" width="100%" />
               </div>
           </div>
-            
-
       </div>
-      <div>
-        <h1 className='font-semibold ml-8'>GALERI KAMPUS</h1>
+      <div data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
+        <h1 className='font-semibold ml-8 mt-8'>Testimonials</h1>
+        <Slides />
+      </div>
+      <div data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
+        <h1 className='font-semibold ml-8 mt-8'>GALERI KAMPUS</h1>
         <Galery />
       </div>
     </div>
