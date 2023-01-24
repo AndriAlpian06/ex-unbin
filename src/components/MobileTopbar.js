@@ -18,7 +18,7 @@ export default function MobileTopbar() {
         <button style={{
         position: 'fixed',
         bottom: '500px',
-        right: '0px',
+        left: '0px',
         height: '50px',
         width: '50px',
         fontSize: '50px'
